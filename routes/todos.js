@@ -3,6 +3,7 @@ const router = express.Router()
 const todosController = require('../controllers/todos')
 
 router.get('/', todosController.getTodos)
+//Root route because we are already inside todos.
 
 router.post('/createTodo', todosController.createTodo)
 

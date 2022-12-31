@@ -6,6 +6,7 @@ module.exports = {
             const todoItems = await Todo.find()
             const itemsLeft = await Todo.countDocuments({completed: false})
             res.render('todos.ejs', {todos: todoItems, left: itemsLeft})
+            //Finds documents in DB, counts them and passes them into ejs file so they can be rendered into HTML. Todo is our model. It should not be here and be separated.
         }catch(err){
             console.log(err)
         }

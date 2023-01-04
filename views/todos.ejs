@@ -12,6 +12,7 @@
     <ul>
     <% todos.forEach( el => { %>
         <li class='todoItem' data-id='<%=el._id%>'>
+            <!-- Data ID comes from MongoDB. -->
             <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
             <span class='del'> Delete </span>
         </li>

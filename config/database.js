@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 
 const connectDB = async () => {
+  //Function which is called on the server.js
   try {
     const conn = await mongoose.connect(process.env.DB_STRING, {
+      //Enviroment variable. We need to go to env file.
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
@@ -16,3 +18,4 @@ const connectDB = async () => {
 }
 
 module.exports = connectDB
+//Spits out the function above to use elsewhere.
